@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Vendedor</title>
+</head>
+<body>
+    <h1>Editar Vendedor</h1>
+    <form method="post" action="{% url 'vendedor:editar_vendedor' vendedor.id %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Salvar Alterações">
+    </form>
+    <br>
+    <a href="{% url 'vendedor:lista_vendedores' %}">Voltar para a Lista de Vendedores</a>
+</body>
+</html>

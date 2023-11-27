@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adicionar Grupo de Produto</title>
+</head>
+<body>
+    <h1>Adicionar Grupo de Produto</h1>
+    <form method="post" action="{% url 'grupoprodutos:adicionar_grupoproduto' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Adicionar">
+    </form>
+    <br>
+    <a href="{% url 'grupoprodutos:lista_grupoprodutos' %}">Voltar para a Lista de Grupos de Produtos</a>
+</body>
+</html>

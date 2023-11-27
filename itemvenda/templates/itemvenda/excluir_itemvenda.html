@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Excluir Item de Venda</title>
+</head>
+<body>
+    <h1>Excluir Item de Venda</h1>
+    <p>Tem certeza de que deseja excluir o item "{{ itemvenda.produto }}"?</p>
+    <form method="post" action="{% url 'itemvenda:excluir_itemvenda' itemvenda.id %}">
+        {% csrf_token %}
+        <input type="submit" value="Sim, Excluir">
+    </form>
+    <br>
+    <a href="{% url 'itemvenda:lista_itemvenda' %}">Cancelar e Voltar para a Lista de Itens de Venda</a>
+</body>
+</html>

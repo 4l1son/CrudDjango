@@ -1,13 +1,17 @@
-<!-- clientes/templates/clientes/lista_clientes.html -->
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Lista de Grupo Produtos</title>
+    <title>Lista de Grupos de Produtos</title>
 </head>
 <body>
-    <h2>Lista de Grupo Produtos</h2>
+    <h1>Lista de Grupos de Produtos</h1>
     <ul>
-        ok
+        {% for grupoproduto in grupoprodutos %}
+            <li><a href="{% url 'grupoprodutos:detalhes_grupoproduto' grupoproduto.id %}">{{ grupoproduto.nome }}</a></li>
+        {% endfor %}
     </ul>
+    <a href="{% url 'grupoprodutos:adicionar_grupoproduto' %}">Adicionar Grupo de Produto</a>
+    <li><a href="{% url 'home:home' %}">home</a></li>
+
 </body>
 </html>

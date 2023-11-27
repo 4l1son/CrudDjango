@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalhes do Vendedor</title>
+</head>
+<body>
+    <h1>Detalhes do Vendedor</h1>
+    <p>Nome: {{ vendedor.nome }}</p>
+    <p>Email: {{ vendedor.email }}</p>
+    <a href="{% url 'vendedor:editar_vendedor' vendedor.id %}">Editar</a>
+    <a href="{% url 'vendedor:excluir_vendedor' vendedor.id %}">Excluir</a>
+    <a href="{% url 'vendedor:lista_vendedores' %}">Voltar para a Lista de Vendedores</a>
+</body>
+</html>

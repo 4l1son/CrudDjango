@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Bem-vindo à Página Inicial</h1>
+
+    <h2>Clientes</h2>
+    <ul>
+        <li><a href="{% url 'clientes:lista_clientes' %}">Lista de Clientes</a></li>
+        <li><a href="{% url 'clientes:adicionar_cliente' %}">Adicionar Cliente</a></li>
+    </ul>
+
+    <h2>Produtos</h2>
+    <ul>
+        <li><a href="{% url 'produtos:lista_produtos' %}">Lista de Produtos</a></li>
+        <li><a href="{% url 'produtos:adicionar_produto' %}">Adicionar Produto</a></li>
+    </ul>
+
+    <h2>Vendas</h2>
+    <ul>
+        <li><a href="{% url 'vendas:lista_vendas' %}">Lista de Vendas</a></li>
+        <li><a href="{% url 'vendas:adicionar_venda' %}">Adicionar Venda</a></li>
+    </ul>
+
+    <h2>Vendedores</h2>
+    <ul>
+        <li><a href="{% url 'vendedor:lista_vendedores' %}">Lista de Vendedores</a></li>
+        <li><a href="{% url 'vendedor:adicionar_vendedor' %}">Adicionar Vendedor</a></li>
+    </ul>
+
+    <h2>Grupos de Produtos</h2>
+    <ul>
+        <li><a href="{% url 'grupoprodutos:lista_grupoprodutos' %}">Lista de Grupos de Produtos</a></li>
+        <li><a href="{% url 'grupoprodutos:adicionar_grupoproduto' %}">Adicionar Grupo de Produto</a></li>
+    </ul>
+
+    <h2>Itens de Venda</h2>
+    <ul>
+        <li><a href="{% url 'itemvenda:lista_itemvenda' %}">Lista de Itens de Venda</a></li>
+        <li><a href="{% url 'itemvenda:adicionar_itemvenda' %}">Adicionar Item de Venda</a></li>
+        <li><a href="{% url 'home:home' %}">home</a></li>
+
+    </ul>
+</body>
+</html>

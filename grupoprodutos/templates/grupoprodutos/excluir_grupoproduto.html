@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Excluir Grupo de Produto</title>
+</head>
+<body>
+    <h1>Excluir Grupo de Produto</h1>
+    <p>Tem certeza de que deseja excluir o grupo "{{ grupoproduto.nome }}"?</p>
+    <form method="post" action="{% url 'grupoprodutos:excluir_grupoproduto' grupoproduto.id %}">
+        {% csrf_token %}
+        <input type="submit" value="Sim, Excluir">
+    </form>
+    <br>
+    <a href="{% url 'grupoprodutos:lista_grupoprodutos' %}">Cancelar e Voltar para a Lista de Grupos de Produtos</a>
+</body>
+</html>

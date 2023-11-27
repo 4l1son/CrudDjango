@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalhes do Item de Venda</title>
+</head>
+<body>
+    <h1>Detalhes do Item de Venda</h1>
+    <p>Produto: {{ itemvenda.produto }}</p>
+    <p>Quantidade: {{ itemvenda.quantidade }}</p>
+    <p>Preço Unitário: {{ itemvenda.preco_unitario }}</p>
+    <a href="{% url 'itemvenda:editar_itemvenda' itemvenda.id %}">Editar</a>
+    <a href="{% url 'itemvenda:excluir_itemvenda' itemvenda.id %}">Excluir</a>
+    <a href="{% url 'itemvenda:lista_itemvenda' %}">Voltar para a Lista de Itens de Venda</a>
+</body>
+</html>

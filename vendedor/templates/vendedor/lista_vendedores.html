@@ -1,13 +1,17 @@
-<!-- clientes/templates/clientes/lista_clientes.html -->
 <!DOCTYPE html>
 <html>
 <head>
     <title>Lista de Vendedores</title>
 </head>
 <body>
-    <h2>Lista de Produtos</h2>
+    <h1>Lista de Vendedores</h1>
     <ul>
-        ok
+        {% for vendedor in vendedores %}
+            <li><a href="{% url 'vendedor:detalhes_vendedor' vendedor.id %}">{{ vendedor.nome }}</a></li>
+        {% endfor %}
     </ul>
+    <a href="{% url 'vendedor:adicionar_vendedor' %}">Adicionar Vendedor</a>
+    <li><a href="{% url 'home:home' %}">home</a></li>
+
 </body>
 </html>
