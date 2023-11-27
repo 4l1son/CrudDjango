@@ -1,9 +1,9 @@
 from django.db import models
 
 class Produto(models.Model):
-    nomeProduto = models.CharField(max_length=255)
-    quantidade = models.CharField(max_length=255)
-    id = models.AutoField(primary_key=True)
+    nome = models.CharField(max_length=100)
+    preco = models.DecimalField(max_digits=10, decimal_places=2)
+    descricao = models.TextField()
 
     def __str__(self):
-        return self.nomeProduto
+        return self.nome

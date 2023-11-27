@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalhes da Venda</title>
+</head>
+<body>
+    <h1>Detalhes da Venda</h1>
+    <p>Nome do Cliente: {{ venda.nome_cliente }}</p>
+    <p>Valor Total: {{ venda.valor_total }}</p>
+    <a href="{% url 'vendas:lista_vendas' %}">Voltar para a Lista de Vendas</a>
+    <a href="{% url 'vendas:editar_venda' venda.id %}">Editar</a>
+    <a href="{% url 'vendas:excluir_venda' venda.id %}">Excluir</a>
+</body>
+</html>

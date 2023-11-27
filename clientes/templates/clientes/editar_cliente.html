@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Cliente</title>
+</head>
+<body>
+    <h1>Editar Cliente</h1>
+    <form method="post" action="{% url 'clientes:editar_cliente' cliente.id %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Salvar Alterações">
+    </form>
+    <br>
+    <a href="{% url 'clientes:lista_clientes' %}">Cancelar e Voltar para a Lista de Clientes</a>
+</body>
+</html>

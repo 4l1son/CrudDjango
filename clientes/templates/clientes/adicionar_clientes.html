@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adicionar Cliente</title>
+</head>
+<body>
+    <h1>Adicionar Cliente</h1>
+    <form method="post" action="{% url 'clientes:adicionar_cliente' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Adicionar">
+    </form>
+    
+    <!-- Add a link to lista_clientes view -->
+    <br>
+    <a href="{% url 'clientes:lista_clientes' %}">Voltar para a Lista de Clientes</a>
+</body>
+</html>
